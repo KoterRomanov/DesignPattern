@@ -3,11 +3,12 @@
 int main( int argc, char **argv )
 {
 	AbstractAnimalFactory *factory = new TigerFactor;
-	factory->create()->name();
+	AbstractAnimal *tiger = factory->create();
+	tiger->name();
 
 	factory = new LionFactory;
-	factory->create()->name();
-
+	AbstractAnimal *lion = factory->create();
+	lion->name();
 
 	return 0;
 }
